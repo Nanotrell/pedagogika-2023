@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/main.css')}}">
+	<title>{% block title %}{% endblock %}</title>
+</head>
+<body>
+	<div class="menu-block">
+		<div class="menu-cont">
+			<div><h3><b>Меню</b></h3></div>
+			<a href="{{ url_for('index')}}"><b>Главная страница</b> - деятельность и идеи известных российских педагогов и психологов</a>
+			<a href="{{ url_for('quotes')}}"><b>Азбука педагога</b> - полезные цитаты, которые должен знать каждый учитель</a>
+			<a href="{{ url_for('books')}}"><b>Книги по педагогике</b> - дополнительное образование для учителей</a>
+		</div>
+	</div>
+	<header>
+		<div class="logo"></div>
+		<span style="font-family: 'A.C.M.E. Secret Agent'; font-size: 22px;">Великие_наставники.ru</span>
+		<div class="navigation" onclick="menuFunction()">
+			<div class="line-1"></div>
+			<div class="line2">
+				<div class="line2-1"></div>
+				<div class="line2-2"></div>
+			</div>
+			<div class="line-3"></div>
+		</div>
+	</header>
+	<div class="container">
+		<h1 style="font-size: 28px; margin-top: 50px; text-align: center;">{% block h1block %}{% endblock %}</h1>
+		<p style="font-size: 22px; margin-bottom: 80px; text-align: center;"><b>{% block h2block %}{% endblock %}</b></p>
+		<div class="oglavlenie">
+			<b style="font-size: 19px;">{% block ogltext %}{% endblock %}</b>
+				{% block ogllist %}{% endblock %}
+		</div>
+		<div class="content">
+			{% block content %}{% endblock %}
+		</div>
+	</div>
+	
+	<footer><a href="{{ url_for('sourse')}}">Источники</a></footer>
+	<script>
+		let s = 1;
+	 let ExtraLine1 = document.getElementsByClassName('line-1')[0];
+	 let ExtraLine2 = document.getElementsByClassName('line-3')[0];
+	 let TwoLines = document.getElementsByClassName('line2')[0];
+		let Line1 = document.getElementsByClassName('line2-1')[0];
+		let Line2 = document.getElementsByClassName('line2-2')[0];
+		let MenuBlock = document.getElementsByClassName('menu-block')[0];
+		document.getElementsByClassName('navigation')[0].onclick = menuFunction;
+		function menuFunction() {
+			if (s == 1) {
+				TwoLines.style.overflow = "visible";
+				ExtraLine1.style.marginBottom = "-13px";
+				ExtraLine2.style.marginTop = "-13px";
+				ExtraLine1.style.opacity = "0";
+				ExtraLine2.style.opacity = "0";
+				ExtraLine1.style.transform = "rotate(45deg)";
+				ExtraLine2.style.transform = "rotate(-45deg)";
+				Line1.style.transform = "rotate(45deg)";
+				Line2.style.transform = "rotate(-45deg)";
+				MenuBlock.style.right = "0";
+				s = 0;
+			} else {
+				ExtraLine1.style.marginBottom = "0px";
+				ExtraLine2.style.marginTop = "0px";
+				ExtraLine1.style.opacity = "1";
+				ExtraLine2.style.opacity = "1";
+				ExtraLine1.style.transform = "rotate(0deg)";
+				ExtraLine2.style.transform = "rotate(0deg)";
+				Line1.style.transform = "rotate(0deg)";
+				Line2.style.transform = "rotate(0deg)";
+				MenuBlock.style.right = "-100%";
+				s = 1;
+			}
+		}
+	</script>
+</body>
+</html>
+
+		<!-- 
+
+
+ -->
