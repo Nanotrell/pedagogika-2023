@@ -166,3 +166,17 @@ summary:hover {
 	flex-direction: column;
 	gap: 80px;
 }
+
+.message {
+	background-color: #E9E5E5;
+	padding: 21px;
+	width: fit-content;
+}
+
+.message-cont {
+	margin-bottom: 24px;
+	width: fit-content;
+	display: flex;
+	gap: 12px;
+	align-items: flex-end;
+}
