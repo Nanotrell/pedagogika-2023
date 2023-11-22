@@ -1,10 +1,10 @@
 @font-face {
 	font-family: "A.C.M.E. Secret Agent";
-	src: url("static/fonts/acmesa.TTF");
+	src: url(static/fonts/acmesa.TTF);
 }
 @font-face {
 	font-family: "Rose Versailles1";
-	src: url("static/fonts/roseversailles1.ttf");
+	src: url(static/fonts/roseversailles1.ttf);
 }
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
