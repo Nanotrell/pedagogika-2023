@@ -71,6 +71,11 @@ footer {
 	background-size: cover;
 }
 
+.logo-text {
+	font-family: 'A.C.M.E. Secret Agent'; 
+	font-size: 22px
+}
+
 /* блок меню */
 
 .menu-block {
@@ -125,6 +130,11 @@ a:hover {
 }
 
 /* контент */
+
+.big-literal {
+	font-size: 50px; 
+	font-family: 'Rose Versailles1'
+}
 
 .content {
 	margin-bottom: 100px;
