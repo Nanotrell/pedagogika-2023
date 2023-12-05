@@ -8,6 +8,25 @@
 	src: url(fonts/roseversailles1.ttf);
 }
 
+:root {
+	--image-size: 30%;
+	--menu-width: 30%;
+}
+
+.quotes-mal-one-block {
+	margin-left: 80px; 
+	padding-left: 30px; 
+	border-left: solid 1px #0085FF;
+}
+
+.quotes-oglavlenie {
+	display: grid; 
+	grid-template-rows: 60px 60px 60px; 
+	grid-template-columns: 50px 50px 50px 50px 50px 50px 50px 50px 50px; 
+	list-style: none; 
+	z-index: 100;
+}
+
 .book-image {
 	min-width: 200px; min-height: 300px; max-width: 200px; max-height: 300px;
 }
@@ -41,8 +60,14 @@
 }
 
 @media screen and (width<600px) {
+	:root {
+		--menu-width: 50%;
+	}
+	.quotes-mal-one-block {
+		margin-left: 20px; 
+	}
 	.book-image {
-		min-width: 100px; min-height: 150px; max-width: 100px; max-height: 150px;
+		min-width: var(--image-size); min-height: calc((var(--image-size))*1.5); max-width: var(--image-size); max-height: calc((var(--image-size))*1.5);
 	}
 	.quotes-content-block {
 		width: 80%;
@@ -55,10 +80,17 @@
 	width: 90%;
 }
 	.biograph-image {
-		min-height: 150px;
-		min-width: 150px;
-		max-height: 150px;
-		max-width: 150px;
+		min-height: var(--image-size);
+		min-width: var(--image-size);
+		max-height: var(--image-size);
+		max-width: var(--image-size);
+	}
+	.quotes-oglavlenie {
+		grid-template-rows: 12vw 12vw 12vw; 
+		grid-template-columns: 10vw 10vw 10vw 10vw 10vw 10vw 10vw 10vw ; 
+	}
+	.logo {
+		display: none;
 	}
 }
 @media screen and (width>600px) {
@@ -148,8 +180,8 @@ footer {
 	z-index: 1001;
 	top: 80px;             /*высота header */
 	right: -100%;
- max-width: 30%;
-	min-width: 30%;
+ max-width: var(--menu-width);
+	min-width: var(--menu-width);
 	background-color: #D4EED4;
 	padding: 20px;
 }
@@ -249,3 +281,4 @@ summary:hover {
 	gap: 45px;
 	flex-direction: column;
 }
+
