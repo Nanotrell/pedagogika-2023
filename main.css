@@ -85,13 +85,14 @@
 
 @media screen and (width<600px) {
 	.user {
+		max-width: 60%;
 		margin-right: -170px;
 	}
 	.message-cont-message-1-image-1 {
-		margin-top: -50px;
-		margin-bottom: -50px;
-		margin-left: -100px;
-		transform: scale(0.7);
+		margin-top: -60px;
+		margin-bottom: -60px;
+		margin-left: -110px;
+		transform: scale(0.65);
 	}
 	:root {
 		--menu-width: 50%;
@@ -100,10 +101,10 @@
 	}
 
 	.messages-bot-user-cont {
-		transform: scale(0.7);
-		margin-top: -150px;
-		margin-bottom: -150px;
-		margin-left: -50px;
+		transform: scale(0.65);
+		margin-top: -170px;
+		margin-bottom: -170px;
+		margin-left: -70px;
 	}
 
 	.quotes-mal-one-block {
@@ -251,7 +252,6 @@ a:hover {
 	gap: 30px;
 }
 .oglavlenie ol {
-	margin-left: clamp(20px, 3vw, 50px);
 	color: #164B9C;
 }
 
@@ -317,7 +317,7 @@ summary:hover {
 	padding-left: clamp(15px, 3vw, 30px);
 	display: flex;
 	border-left: solid 1px #0085ff;
-	gap: 45px;
+	gap: 3vw;
 	flex-direction: column;
 }
 
