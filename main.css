@@ -11,6 +11,7 @@
 :root {
 	--image-size: 30%;
 	--menu-width: 30%;
+	--message-img-1-width: 40%;
 }
 
 .quotes-mal-one-block {
@@ -64,10 +65,47 @@
 	gap: 80px;
 }
 
+.message-1-image-1 {
+	width: 600px; 
+	height: 300px; 
+	border-radius: 25px; 
+	background-image: url(static/images/фото1.jpeg); 
+	background-size: contain;
+}
+
+.messages-bot-user-cont {
+	width: 100%;
+}
+.logo {
+	display: inline-block;
+	height: clamp(30px,3vw,40px);
+	width: clamp(30px,3vw,40px);
+	background-size: cover;
+}
+
 @media screen and (width<600px) {
+	.user {
+		margin-right: -170px;
+	}
+	.message-cont-message-1-image-1 {
+		margin-top: -50px;
+		margin-bottom: -50px;
+		margin-left: -100px;
+		transform: scale(0.7);
+	}
 	:root {
 		--menu-width: 50%;
+		--image-size: 30%;
+		/* --message-img-1-width: 40%; */
 	}
+
+	.messages-bot-user-cont {
+		transform: scale(0.7);
+		margin-top: -150px;
+		margin-bottom: -150px;
+		margin-left: -50px;
+	}
+
 	.quotes-mal-one-block {
 		margin-left: 20px; 
 	}
@@ -164,11 +202,7 @@ footer {
 	margin-top: -2px;
 }
 
-.logo {
-	height: clamp(30px,3vw,40px);
-	width: clamp(30px,3vw,40px);
-	background-size: cover;
-}
+
 
 .logo-text {
 	font-family: 'A.C.M.E. Secret Agent'; 
