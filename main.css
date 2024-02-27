@@ -228,9 +228,12 @@ footer {
 	margin-top: -2px;
 }
 
-
+.logo-text:hover {
+	text-decoration: none;
+}
 
 .logo-text {
+	color: #000;
 	font-family: 'A.C.M.E. Secret Agent'; 
 	font-size: clamp(18px, 3vw, 22px);
 }
